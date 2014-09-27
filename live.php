@@ -1,5 +1,4 @@
 <?php
-include("common.php");
 
 $list = $_GET['list'];
 

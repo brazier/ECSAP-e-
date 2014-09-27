@@ -1,6 +1,3 @@
-<?php include("common.php"); 
-?>
-
 <div class="playerlist">
 <table class="playerlist" height="100%" cellpadding="1" cellspacing="1">
 <tr height="100%"><td class="playerlistbody" height="100%">

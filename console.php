@@ -6,8 +6,6 @@ if(!isset($_SESSION['username'])){
 if(isset($_GET['server'])) $_SESSION['server'] = $_GET['server'];
 session_write_close();
 
-include('common.php');
-include("config.php");
 if(isset($_SESSION['server'])) $server = $_SESSION['server'];
 
 

@@ -1,5 +1,4 @@
 <?php
-include("common.php");
 
 $map = $_GET['map'];
 $pl = $_GET['pl'];
