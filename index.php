@@ -7,7 +7,6 @@ if(isset($_GET['server'])) $_SESSION['server'] = $_GET['server'];
 session_write_close();
 include("config.php");
 include('menu.php');
-include("common.php");
 
 
 if(isset($_SESSION['server'])) $server = $_SESSION['server'];
@@ -17,6 +16,8 @@ echo <<<EOF
 <html>
 <head>
 <title>CS:GO Remote Control Panel</title>
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="style/menu.css">
 $css
 <script type="text/javascript">
   function resizeIframe(iframe) {
