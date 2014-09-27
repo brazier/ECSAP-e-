@@ -6,6 +6,12 @@ if(!isset($_SESSION['username'])){
 if(isset($_GET['server'])) $_SESSION['server'] = $_GET['server'];
 session_write_close();
 include("config.php");
+ echo '<html>
+<head>
+<title>CS:GO Remote Control Panel</title>
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="style/menu.css">';
+
 include('menu.php');
 
 
@@ -13,12 +19,6 @@ if(isset($_SESSION['server'])) $server = $_SESSION['server'];
 
 $user = $_SESSION['username'];
 echo <<<EOF
-<html>
-<head>
-<title>CS:GO Remote Control Panel</title>
-<link rel="stylesheet" href="style/styles.css">
-<link rel="stylesheet" href="style/menu.css">
-$css
 <script type="text/javascript">
   function resizeIframe(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
