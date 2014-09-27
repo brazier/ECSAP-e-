@@ -9,7 +9,10 @@ $list_ = explode("<br>",$list);
 
 //$user = $_GET['username'];
 
-$cmd = $_GET['cmd'];
+if (isset($_GET['cmd']))
+{
+	$cmd = $_GET['cmd'];
+}
 
 if($list==NULL)
 {

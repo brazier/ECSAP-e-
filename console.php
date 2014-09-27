@@ -8,7 +8,7 @@ session_write_close();
 
 if(isset($_SESSION['server'])) $server = $_SESSION['server'];
 
-
+include("config.php");
 $say_preg = '/[0-9]{2}\/[0-9]{2}\/[0-9]{4}\W\-\W([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}):\W\"(.*?)\<([0-9]{1,})\>\<(.*?)\>\<(.*?)\>\"\W[s][a][y]\W\"(.*)\"$/';
 $kill_preg = '/([0-9]{2}\/[0-9]{2}\/[0-9]{4})\W\-\W([0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}):\W\"(.*?)\<([0-9]{1,})\>\<(.*?)\>\<(.*?)\>\".*\"(.*?)\<([0-9]{1,})\>\<(.*?)\>\<(.*?)\>\".*?\"(.*?)\"(.*)/';
 $newplayer_preg = '/[L]\W([0-9]{2}\/[0-9]{2}\/[0-9]{4})\W\-\W([0-9]{2}\:[0-9]{2}\:[0-9]{2})\:\W\"(.*?)\<([0-9]{1,})\>\<([S][T][E][A][M]\_.*?)\>\<\>.*?[c][o][n][n][e][c][t].*?\"(.*?)\:.*/';
@@ -99,7 +99,7 @@ echo 'Getting Server Console... '."<br />\n";
 flush();
 ob_flush();
 
-$logPath = $config[$server]['full_console_path'];
+$logPath = $config[$server]['console_full_path'];
 $lastSize = filesize($logPath);
 echo '<div class="console">';
 while(1) {

@@ -1,14 +1,19 @@
 <?php
 
+if(isset($_GET['list']))
+{
 $list = $_GET['list'];
-
+}
 ?>
 <div class="live">
 <table class="live" height="100%">
 <tr height="100%"><td class="livebody" height="100%">
 
 <?php
+if(isset($_GET['list']))
+{
 $list_ = explode("<br>",$list);
+
 foreach($list_ as $lid => $k)
 {
 	if(strpos($k,"=========>")!==false)
@@ -24,7 +29,7 @@ foreach($list_ as $lid => $k)
 	echo '<div style="vertical-align:middle; align="left"">'.$player1.' <img height="30px" src="img/'.$weapon.'.png"> '.$player2.' '.$hs.'</div>';
 	}
 }
-
+}
  ?>
 
 

@@ -5,10 +5,12 @@ if(!isset($_SESSION['username'])){
 }
 if(isset($_GET['server'])) $_SESSION['server'] = $_GET['server'];
 session_write_close();
+
 include("config.php");
+
  echo '<html>
 <head>
-<title>CS:GO Remote Control Panel</title>
+<title>ECSAP(e)</title>
 <link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/menu.css">';
 
@@ -18,20 +20,16 @@ include('menu.php');
 if(isset($_SESSION['server'])) $server = $_SESSION['server'];
 
 $user = $_SESSION['username'];
-echo <<<EOF
+
+?>
+
 <script type="text/javascript">
   function resizeIframe(iframe) {
     iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
   }
 </script> 
-<script language="JavaScript"><!--;
-EOF;
-echo <<<EOF
-user = "$user";
-EOF;
 
-?>
-
+<script language="JavaScript">
 var namelist;
 commandHist = new Array();
 commandNr = 0;
