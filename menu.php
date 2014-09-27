@@ -8,10 +8,9 @@ session_write_close();
 
 <div class="menubar">
 <ul id="nav">
-    <li><a href="#"><font color="#FF9900">Welcome <?php echo $_SESSION['username']; ?></font></a></li>
     <li>
         <a href="#">Servers</a>
-        <ul class="child">
+        <ul>
         <?php
 			foreach($config as $serverid => $info)
 			{
@@ -23,8 +22,8 @@ session_write_close();
         </ul>
     </li>
     <li>
-        <a href="#">Members</a>
-        <ul class="child">
+        <a href="#">Users</a>
+        <ul>
             <li><a href="userlist.php">List</a></li>
             <li><a href="useradd.php">Add</a></li>
         </ul>

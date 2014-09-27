@@ -1,6 +1,9 @@
 body {
     margin:0;
     padding:0;
+    background-color:#262626;
+	color:#CCC;	
+	font-family:"Lucida Grande","Lucida Sans",Helvetica,Arial,sans-serif;
 }
 
 .loginbox {
@@ -13,32 +16,7 @@ body {
 	height:35px;
 	margin:0 0 10px 0;
 }
-nav ul {
-	padding-left:0;
-	padding-bottom:0;
-	padding-right:0;
-	padding-top:0;
-	padding: 0;
-}
-nav ul ul {
-	padding-left:0;
-	padding-bottom:0;
-	padding-right:0;
-	padding-top:0;
-	padding: 0;
-	display: none;
-}
 
-nav ul li:hover > ul {
-		display: block;
-}
-body {
-	background-color:#262626;
-	color:#CCC;	
-	font-family:"Lucida Grande","Lucida Sans",Helvetica,Arial,sans-serif;
-	
-	
-}
 .title {
 	width:100%;
 	background-color:#333;
