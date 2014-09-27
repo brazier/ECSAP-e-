@@ -1,28 +1,18 @@
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
-<tr>
-<form name="form1" method="post" action="checkin.php">
-<td>
-<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF">
-<tr>
-<td colspan="3"><strong>Member Login </strong></td>
-</tr>
-<tr>
-<td width="78">Username</td>
-<td width="6">:</td>
-<td width="294"><input name="myusername" type="text" id="myusername"></td>
-</tr>
-<tr>
-<td>Password</td>
-<td>:</td>
-<td><input name="mypassword" type="text" id="mypassword"></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><input type="submit" name="Submit" value="Login"></td>
-</tr>
-</table>
-</td>
-</form>
-</tr>
-</table>
+<html>
+	<head>
+		<title>ECSAP(e) - Easy Counter Strike Admin Panel</title>
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/menu.css">
+	</head>
+	<body>
+
+		<div class="menubar"></div>
+
+	
+			<form name="form1" class="loginbox" method="post" action="checkin.php">
+				<input name="myusername" type="text" id="myusername" placeholder="Username">
+				<input name="mypassword" type="text" id="mypassword" placeholder="Password">
+				<input type="submit" name="Submit" value="Login">
+			</form>
+	</body>
+</html>

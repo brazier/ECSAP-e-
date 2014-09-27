@@ -1,3 +1,18 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+.loginbox {
+	margin: 0 auto;
+	width: 350px;
+}
+.loginbox input {
+	float:right;
+	width:350px;
+	height:35px;
+	margin:0 0 10px 0;
+}
 nav ul {
 	padding-left:0;
 	padding-bottom:0;
