@@ -9,7 +9,7 @@ include("config.php");
  echo '<html>
 <head>
 <title>CS:GO Remote Control Panel</title>
-<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="style/style.css">
 <link rel="stylesheet" href="style/menu.css">';
 
 include('menu.php');
