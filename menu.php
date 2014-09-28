@@ -4,8 +4,8 @@ if(!isset($_SESSION['username'])){
 	die();
 }
 session_write_close();
-?>
 
+?>
 <div class="menubar">
 <ul id="nav">
     <li>
@@ -14,8 +14,11 @@ session_write_close();
         <?php
 			foreach($config as $serverid => $info)
 			{
-				if(isset($info["shortname"]))
-				echo '<li><a href="index.php?server='.$serverid.'">'.$info['shortname'].'</a></li>';
+				if(isset($info["ip"]))
+                $server1 = new SourceServer($info["ip"], $info["port"]);
+                $server1->initialize();
+                $server1->getServerInfo();
+				echo '<li><a href="index.php?serv='.$serverid.'">'.$server['serverName'].'</a></li>';
 				
 			}
 		?>

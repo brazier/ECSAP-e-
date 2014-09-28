@@ -17,6 +17,39 @@ body {
 	margin:0 0 10px 0;
 }
 
+table tr:nth-child(even) {
+    background-color: #262626;
+}
+table tr:nth-child(odd) {
+    background-color: #202020;
+}
+table th {
+    color: #295680;
+    background-color: #1b1b1b;
+} 
+
+div#left {
+	margin: 0 0 0 15px;
+	float: left;
+	width: 60%;
+}
+div#right {
+	float:right;
+	width: 35%;
+}
+#left textarea {
+	margin:20px 0 0 0;
+	width:80%;
+	height:500px;
+	background-color:#202020;
+}
+#left input[type="text"] { 
+	width:70%;
+	background-color:#202020;
+	}
+#left input[type="button"] {
+	width: 10%;
+}
 .title {
 	width:100%;
 	background-color:#333;

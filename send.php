@@ -3,31 +3,54 @@ session_start();
 if(!isset($_SESSION['username'])){
 	die();
 }
-if(isset($_GET['server'])) $_SESSION['server'] = $_GET['server'];
-session_write_close();
+require __DIR__ . '\lib\steam-condenser\steam-condenser.php';
+include("config.php");
+error_reporting(E_NOTICE);
 
-if(isset($_SESSION['server'])) $server = $_SESSION['server'];
-//$user = $_GET['username'];
-$cmd = $_GET['cmd'];
-if(($cmd == "") OR (strpos($cmd,"exec")!==false)) die();
-require __DIR__ . '/SourceQuery/SourceQuery.class.php';
-	define( 'SQ_SERVER_ADDR', $config[$server]['ip'] );
-        define( 'SQ_SERVER_PORT', $config[$server]['port'] );
-        define( 'SQ_TIMEOUT',     1 );
-        define( 'SQ_ENGINE',      SourceQuery :: SOURCE );
-	$RCP = new SourceQuery( );
-	try
+if(isset($_GET['getPlayers']))
 	{
-		$RCP->Connect( SQ_SERVER_ADDR, SQ_SERVER_PORT, SQ_TIMEOUT, SQ_ENGINE );
-		$RCP->SetRconPassword( $config[$server]['rcon_password'] );
-		$Return = $RCP->Rcon( $cmd );
+		echo '<table id="players">';
+		echo '<tr>
+			<th>ID</th>
+			<th width="250px">Name</td>
+			<th>Ping</th>
+			<th>Steam id</th>
+			<th>IP</th>
+		</tr>
+			';
+			$server = new SourceServer($config[$_GET['serv']]['ip'],$config[$_GET['serv']]['port']);
+			$server->initialize();
+			$players = $server->getPlayers($config[$_GET['serv']]['rcon_password']);
+		foreach($players as $key => $value){
+			echo '<tr>';
+			echo "<td>{$value->getrealId()}</td><td>{$value->getName()}</td><td>{$value->getPing()}</td><td>{$value->getSteamId()}</td><td>{$value->getipAddress()}</td>\n";
+			echo '</tr>';
+			}
+		echo '</table>';
 	}
-	
-	catch( Exception $e )
-	{
-		$Exception = $e;
-	}
-	$RCP->Disconnect( );
-	//echo $Return;
 
+if(isset($_GET['getHost']))
+	{
+
+		$server = new SourceServer($config[$_GET['serv']]['ip'],$config[$_GET['serv']]['port']);
+		$server->initialize();
+		$host = $server->getServerInfo();
+		echo $host['serverName'];
+	}
+
+if(isset($_GET['getMap']))
+	{
+
+		$server = new SourceServer($config[$_GET['serv']]['ip'],$config[$_GET['serv']]['port']);
+		$server->initialize();
+		$info = $server->getServerInfo();
+		if(file_exists($info['mapName'])){
+			$mapName = $info['mapName'];
+		} else {
+			$mapName = "error";
+		}
+		echo $info['serverName'];
+		echo '<img src="img/'.$mapName.'.png" /><br />';
+		echo ''.$info['numberOfPlayers'].'('.$info['botNumber'].')/'.$info['maxPlayers'];
+	}
 ?>
