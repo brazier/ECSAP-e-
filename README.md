@@ -6,6 +6,9 @@ ECSAP(e) - Easy CS Admin Panel
 A fork of CS:GO Web Admin made by Reneb
 https://sourceforge.net/projects/csgowebadmin/
 
+
+At the moment this project is broken, switching lib and rewriting most things.
+
 REQUIREMENTS:
 - PHP5
 - MySQL
@@ -26,30 +29,11 @@ http://roguesoldiers.eu/csgo/ (this is link doesn't really exist ...)
 CONFIGURATION
 Only file to configurate is config.php
 
-Here are examples of what should be in config.php:
-
-<?php
-$config[0]['shortname'] = "War3";
-$config[0]['name'] = "RS War3 Source Mod";
-$config[0]['ip'] = "5.135.150.82";
-$config[0]['port'] = "27010";
-$config[0]['rcon_password'] = "RCONPASS1";
-$config[0]['maps_path'] = "/home/steam/serverfiles/csgo/maps";
-
-$config[1]['shortname'] = "Gun Game";
-$config[1]['name'] = "RS Gun Game";
-$config[1]['ip'] = "5.135.150.82";
-$config[1]['port'] = "27015";
-$config[1]['rcon_password'] = "RCONPASS2";
-$config[1]['maps_path'] = "/home/steam/serverfiles/csgo2/maps";
-?>
 
 shortname => will be showed in the main menu
-name => will be the main name of your server on the RCP
 ip => 127.0.0.1, localhost can be used if you are using it on a local machine
 port => 27015 (default), it is your server's connection port. 
 rcon_password => the rcon password of your server
-maps_path => the full path to access the server's maps, this feature can only be working if you are launching the website from the same machine your servers are. leave it empty if you don't or can't use it.
 
 ADDING USERS
 
@@ -66,7 +50,3 @@ if you want to add a new image minimap
 add it in csgo/maps/
 with NAMEOFMAP.png
 example: de_rats_1337.png
-
-For any other help
-
-Contact me on sourceforge or http://roguesoldiers.eu
