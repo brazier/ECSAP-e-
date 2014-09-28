@@ -2,12 +2,11 @@ ECSAP-e-
 ========
 
 ECSAP(e) - Easy CS Admin Panel
+<h3>At the moment this project is broken, switching lib and rewriting most things.</h3>
 
 A fork of CS:GO Web Admin made by Reneb
 https://sourceforge.net/projects/csgowebadmin/
 
-
-At the moment this project is broken, switching lib and rewriting most things.
 
 REQUIREMENTS:
 - PHP5
