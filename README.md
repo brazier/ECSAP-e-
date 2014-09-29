@@ -8,11 +8,11 @@ https://sourceforge.net/projects/csgowebadmin/*
 
 ~~At the moment this project is broken, switching lib and rewriting most things.~~
 At the moment this program has very limited abilities.
--list/add/remove users of the panel, all with the same powers
--add multiple servers through config.php
--view hostname and map being played.
--view players in game, and certain info about them(id, steam_id, ip, ping)
--kick said players.
+- list/add/remove users of the panel, all with the same powers
+- add multiple servers through config.php
+- view hostname and map being played.
+- view players in game, and certain info about them(id, steam_id, ip, ping)
+- kick said players.
 
 
 
