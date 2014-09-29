@@ -5,7 +5,15 @@ body {
 	color:#CCC;	
 	font-family:"Lucida Grande","Lucida Sans",Helvetica,Arial,sans-serif;
 }
-
+a {
+	color:#295680;
+}
+a:visited {
+	color:#295680;
+}
+a:hover {
+	color:#1b1b1b;
+}
 .loginbox {
 	margin: 0 auto;
 	width: 350px;
@@ -15,6 +23,10 @@ body {
 	width:350px;
 	height:35px;
 	margin:0 0 10px 0;
+}
+
+#msg {
+	height:75px;
 }
 
 table tr:nth-child(even) {
